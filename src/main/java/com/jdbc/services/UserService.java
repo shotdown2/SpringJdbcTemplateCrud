@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.jdbc.models.User;
 
-
 public interface UserService {
 	
 	public List<User> listAll();

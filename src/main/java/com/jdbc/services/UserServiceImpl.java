@@ -7,24 +7,24 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.jdbc.dao.UserDao;
 import com.jdbc.models.User;
 
-@Service
+
 @WebService
 public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserDao userDao;
 
-	@WebMethod(operationName = "allUsersList")
-	@WebResult(name = "item")
+	@WebMethod(operationName = "ListaTodosUsuarios")
+	@WebResult(name = "itemUsuario")
 	public List<User> listAll() {
 		return userDao.listAll();
 	}
-
+	@WebMethod(operationName = "Inserir")
+	@WebResult(name = "insereUsuario")
 	public void insert(User user) {
 		userDao.insert(user);
 	}

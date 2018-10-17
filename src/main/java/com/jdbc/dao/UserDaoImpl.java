@@ -54,7 +54,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	public void insert(User user) {
-		String sql = "INSERT INTO users(id, nome, sobrenome) VALUES (:id, :nome, :sobrenome)";
+		String sql = "INSERT INTO users(nome, sobrenome) VALUES (:nome, :sobrenome)";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModels(user));
 	}
 
